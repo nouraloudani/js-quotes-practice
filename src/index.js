@@ -85,11 +85,26 @@ const updateLike = likeObj => {
 
 const editQuote = event => {
     const li = event.target.closest("li")
-    li.querySelector('form').style.display = "block"
+    if (event.target.dataset.show === "false") {
+        event.target.dataset.show = true
+        event.target.innerText = "Cancel Edits"
+        li.querySelector('form').style.display = "block"
+    } else {
+        event.target.dataset.show = false
+        event.target.innerText = "Edit"
+        li.querySelector('form').style.display = "none"
+    }
 }
 
 const updateQuote = event => {
     const id = parseInt(event.target.closest("li").dataset.id)
+        if (event.target.quote.value === "") {
+            event.target.quote.value = event.target.quote.placeholder
+        }
+        if (event.target.author.value === "") {
+            event.target.author.value = event.target.author.placeholder
+        }
+
     const updatedQuote = getFormInfo(event)
 
     fetch(`${quotesUrl}/${id}`,{
@@ -164,7 +179,7 @@ const createNewQuote = (quote) => {
                 <button class='btn-danger'>Delete</button>
                 <button class='edit-btn'>Edit</button>
             </blockquote>
-            <form id="edit-quote-form" style="display: none;">
+            <form id="edit-quote-form" style="display: none;" data-show="false" >
                 <div class="form-group">
                     <label for="new-quote">Quote</label>
                     <input name="quote" type="text" class="form-control" id="new-quote" placeholder="${quote.quote}">
@@ -193,7 +208,7 @@ const updateQuoteLi = quote => {
         <button class='btn-danger'>Delete</button>
         <button class='edit-btn'>Edit</button>
     </blockquote>
-    <form id="edit-quote-form" style="display: none;">
+    <form id="edit-quote-form" style="display: none;" data-show="false" >
         <div class="form-group">
             <label for="new-quote">Quote</label>
             <input name="quote" type="text" class="form-control" id="new-quote" placeholder="${quote.quote}">
