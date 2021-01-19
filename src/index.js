@@ -20,11 +20,11 @@ const quotesByAuthor = () => {
     fetch("http://localhost:3000/quotes?_sort=author")
     .then(res => res.json())
     .then(quotesArray => {
-        quotesArray.forEach(createNewQuote)
+        quotesArray.forEach (createNewQuote)
     })
 }
 
-const initializeQuotes = () => {
+const initializeQuotes = () =>{
     list.innerHTML = ""
     fetch(url)
     .then(res => res.json())
