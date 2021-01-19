@@ -54,6 +54,16 @@
       "id": 11,
       "quote": "The here and now is all we have, and if we play it right it's all we'll need.",
       "author": "Ann Richards"
+    },
+    {
+      "quote": "test",
+      "author": "sdsdf",
+      "id": 12
+    },
+    {
+      "quote": "Test",
+      "author": "sadas",
+      "id": 13
     }
   ],
   "likes": [
@@ -66,6 +76,71 @@
       "quoteId": 10,
       "id": 2,
       "createdAt": 1558524358
+    },
+    {
+      "quoteId": 2,
+      "createdAt": 1611071785156,
+      "id": 3
+    },
+    {
+      "quoteId": 2,
+      "createdAt": 1611071832669,
+      "id": 4
+    },
+    {
+      "quoteId": 2,
+      "createdAt": 1611072047358,
+      "id": 5
+    },
+    {
+      "quoteId": 2,
+      "createdAt": 1611072047931,
+      "id": 6
+    },
+    {
+      "quoteId": 2,
+      "createdAt": 1611072048668,
+      "id": 7
+    },
+    {
+      "quoteId": 2,
+      "createdAt": 1611072050733,
+      "id": 8
+    },
+    {
+      "quoteId": 5,
+      "createdAt": 1611072090146,
+      "id": 9
+    },
+    {
+      "quoteId": 7,
+      "createdAt": 1611072091136,
+      "id": 10
+    },
+    {
+      "quoteId": 8,
+      "createdAt": 1611072091654,
+      "id": 11
+    },
+    {
+      "quoteId": 12,
+      "createdAt": 1611072092790,
+      "id": 12
+    },
+    {
+      "quoteId": 11,
+      "createdAt": 1611072097434,
+      "id": 13
+    },
+    {
+      "quoteId": 11,
+      "createdAt": 1611072097742,
+      "id": 14
+    },
+    {
+      "quoteId": 11,
+      "createdAt": 1611072098027,
+      "id": 15
     }
   ]
 }
